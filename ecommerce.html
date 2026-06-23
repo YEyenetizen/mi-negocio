@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comprar - TechStore</title>
+    <title>Comprar - Café Aroma</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,7 +11,8 @@
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <h1>🚀 TechStore</h1>
+                <span class="logo-icon">☕</span>
+                <h1>Café Aroma</h1>
             </div>
             <ul class="nav-links">
                 <li><a href="index.html">Inicio</a></li>
@@ -29,14 +30,17 @@
             <h2>Carrito de Compras</h2>
             
             <div class="ecommerce-content">
-                <!-- Carrito de Compras -->
+                <!-- Carrito -->
                 <div class="shopping-cart">
-                    <h3>Tu Carrito</h3>
+                    <h3>🛒 Tu Carrito</h3>
                     <div id="cartItems" class="cart-items">
                         <p class="empty-cart">Tu carrito está vacío</p>
                     </div>
                     <div class="cart-summary">
-                        <p><strong>Total:</strong> $<span id="totalPrice">0.00</span></p>
+                        <h4>Resumen</h4>
+                        <p><strong>Subtotal:</strong> $<span id="subtotal">0.00</span></p>
+                        <p><strong>Impuestos (16%):</strong> $<span id="tax">0.00</span></p>
+                        <p class="total"><strong>Total:</strong> $<span id="totalPrice">0.00</span></p>
                     </div>
                 </div>
 
@@ -61,7 +65,7 @@
                         </fieldset>
 
                         <fieldset>
-                            <legend>Dirección de Envío</legend>
+                            <legend>Dirección de Entrega</legend>
                             <div class="form-group">
                                 <label for="address">Dirección:</label>
                                 <input type="text" id="address" name="address" required>
@@ -81,15 +85,15 @@
                             <div class="payment-methods">
                                 <label>
                                     <input type="radio" name="paymentMethod" value="transferencia" required>
-                                    Transferencia Bancaria
+                                    🏦 Transferencia Bancaria
                                 </label>
                                 <label>
                                     <input type="radio" name="paymentMethod" value="tarjeta" required>
-                                    Tarjeta de Crédito/Débito
+                                    💳 Tarjeta de Crédito/Débito
                                 </label>
                                 <label>
                                     <input type="radio" name="paymentMethod" value="paypal" required>
-                                    PayPal
+                                    🅿️ PayPal
                                 </label>
                             </div>
                         </fieldset>
@@ -104,45 +108,81 @@
 
             <!-- Información de Métodos de Pago -->
             <div class="payment-info">
-                <h3>Métodos de Pago Disponibles</h3>
+                <h2>Métodos de Pago Disponibles</h2>
                 
                 <div class="payment-option">
-                    <h4>🏦 Transferencia Bancaria</h4>
+                    <h3>🏦 Transferencia Bancaria</h3>
                     <ul>
-                        <li><strong>Banco:</strong> Banco Nacional de México (Banamex)</li>
-                        <li><strong>Cuenta:</strong> 123456789</li>
-                        <li><strong>CLABE:</strong> 002180123456789012</li>
-                        <li><strong>Beneficiario:</strong> TechStore S.A. de C.V.</li>
+                        <li><strong>Banco:</strong> Banco Azteca México</li>
+                        <li><strong>Titular:</strong> Café Aroma S.A. de C.V.</li>
+                        <li><strong>Cuenta:</strong> 789456123</li>
+                        <li><strong>CLABE:</strong> 127456789012345678</li>
+                        <li><strong>Referencia:</strong> Tu número de pedido</li>
                     </ul>
+                    <p class="note">📧 Envía comprobante a: pagos@cafearoma.com</p>
                 </div>
 
                 <div class="payment-option">
-                    <h4>💳 Tarjeta de Crédito/Débito</h4>
+                    <h3>💳 Tarjeta de Crédito/Débito</h3>
+                    <p>Aceptamos todas las tarjetas principales:</p>
                     <ul>
-                        <li>Visa</li>
-                        <li>Mastercard</li>
-                        <li>American Express</li>
-                        <li>Discover</li>
+                        <li>✓ Visa</li>
+                        <li>✓ Mastercard</li>
+                        <li>✓ American Express</li>
+                        <li>✓ Discover</li>
                     </ul>
-                    <p class="security">🔒 Tus datos son seguros con encriptación SSL</p>
+                    <p class="security">🔒 Tus datos están protegidos con encriptación SSL 256-bit</p>
+                    <p class="security">✓ Procesamiento seguro de pago</p>
                 </div>
 
                 <div class="payment-option">
-                    <h4>🅿️ PayPal</h4>
-                    <p><a href="https://www.paypal.com" target="_blank">Ir a PayPal</a></p>
-                    <p class="email"><strong>Cuenta PayPal:</strong> ventas@techstore.com</p>
+                    <h3>🅿️ PayPal</h3>
+                    <p>Paga de forma segura y rápida con tu cuenta PayPal.</p>
+                    <p><strong>Ventajas:</strong></p>
+                    <ul>
+                        <li>✓ Pago seguro sin compartir datos bancarios</li>
+                        <li>✓ Comprador y vendedor protegidos</li>
+                        <li>✓ Transacciones rápidas</li>
+                    </ul>
+                    <p><a href="https://www.paypal.com" target="_blank" class="btn btn-small">Ir a PayPal</a></p>
+                </div>
+            </div>
+
+            <!-- Información de Envío -->
+            <div class="shipping-info">
+                <h2>Información de Envío</h2>
+                <div class="shipping-options">
+                    <div class="shipping-card">
+                        <h3>🚚 Envío Estándar</h3>
+                        <p><strong>Tiempo:</strong> 2-3 días hábiles</p>
+                        <p><strong>Costo:</strong> $8.00 (Gratis >$50)</p>
+                    </div>
+                    <div class="shipping-card">
+                        <h3>⚡ Envío Rápido</h3>
+                        <p><strong>Tiempo:</strong> 24 horas</p>
+                        <p><strong>Costo:</strong> $15.00</p>
+                    </div>
+                    <div class="shipping-card">
+                        <h3>🏪 Recoger en Tienda</h3>
+                        <p><strong>Tiempo:</strong> 1-2 horas</p>
+                        <p><strong>Costo:</strong> Gratis</p>
+                    </div>
                 </div>
             </div>
 
             <!-- Video de YouTube -->
             <div class="video-section">
-                <h3>Conoce Más Sobre Nuestros Productos</h3>
+                <h2>Conoce Nuestro Proceso de Preparación</h2>
                 <div class="video-container">
-                    <iframe width="100%" height="500" src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                            title="TechStore - Productos y Servicios" frameborder="0" 
+                    <iframe width="100%" height="500" src="https://www.youtube.com/embed/j6VlT_jUVPc" 
+                            title="Café Aroma - Proceso de Preparación" frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                             allowfullscreen></iframe>
                 </div>
+                <p class="video-description">
+                    En este video podrás ver paso a paso cómo nuestros baristas especializados preparan cada bebida 
+                    con precisión y cuidado. Descubre el arte detrás de cada taza de Café Aroma.
+                </p>
             </div>
         </div>
     </section>
@@ -150,13 +190,32 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 TechStore. Todos los derechos reservados.</p>
-            <p>Síguenos en redes sociales</p>
-            <div class="social-links">
-                <a href="https://www.facebook.com" target="_blank">Facebook</a>
-                <a href="https://www.instagram.com" target="_blank">Instagram</a>
-                <a href="https://www.twitter.com" target="_blank">Twitter</a>
-                <a href="https://www.youtube.com" target="_blank">YouTube</a>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Café Aroma</h3>
+                    <p>Tu café favorito, en el lugar perfecto.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces</h3>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="catalogo.html">Catálogo</a></li>
+                        <li><a href="ubicacion.html">Ubicación</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/cafearoma" target="_blank">Facebook</a>
+                        <a href="https://www.instagram.com/cafearoma" target="_blank">Instagram</a>
+                        <a href="https://www.twitter.com/cafearoma" target="_blank">Twitter</a>
+                        <a href="https://www.youtube.com/cafearoma" target="_blank">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Café Aroma. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
