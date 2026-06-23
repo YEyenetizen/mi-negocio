@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar - TechStore</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>🚀 TechStore</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catálogo</a></li>
+                <li><a href="ubicacion.html">Ubicación</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="ecommerce.html" class="active">Comprar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Página de Comercio Electrónico -->
+    <section class="ecommerce">
+        <div class="container">
+            <h2>Carrito de Compras</h2>
+            
+            <div class="ecommerce-content">
+                <!-- Carrito de Compras -->
+                <div class="shopping-cart">
+                    <h3>Tu Carrito</h3>
+                    <div id="cartItems" class="cart-items">
+                        <p class="empty-cart">Tu carrito está vacío</p>
+                    </div>
+                    <div class="cart-summary">
+                        <p><strong>Total:</strong> $<span id="totalPrice">0.00</span></p>
+                    </div>
+                </div>
+
+                <!-- Formulario de Compra -->
+                <div class="checkout-form">
+                    <h3>Información de Compra</h3>
+                    <form id="checkoutForm">
+                        <fieldset>
+                            <legend>Datos Personales</legend>
+                            <div class="form-group">
+                                <label for="fullname">Nombre Completo:</label>
+                                <input type="text" id="fullname" name="fullname" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout-email">Correo Electrónico:</label>
+                                <input type="email" id="checkout-email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkout-phone">Teléfono:</label>
+                                <input type="tel" id="checkout-phone" name="phone" required>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Dirección de Envío</legend>
+                            <div class="form-group">
+                                <label for="address">Dirección:</label>
+                                <input type="text" id="address" name="address" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">Ciudad:</label>
+                                <input type="text" id="city" name="city" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="postal">Código Postal:</label>
+                                <input type="text" id="postal" name="postal" required>
+                            </div>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Método de Pago</legend>
+                            <div class="payment-methods">
+                                <label>
+                                    <input type="radio" name="paymentMethod" value="transferencia" required>
+                                    Transferencia Bancaria
+                                </label>
+                                <label>
+                                    <input type="radio" name="paymentMethod" value="tarjeta" required>
+                                    Tarjeta de Crédito/Débito
+                                </label>
+                                <label>
+                                    <input type="radio" name="paymentMethod" value="paypal" required>
+                                    PayPal
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <div id="paymentDetails" class="payment-details"></div>
+
+                        <button type="submit" class="btn btn-success">Procesar Compra</button>
+                    </form>
+                    <div id="checkoutMessage" class="checkout-message"></div>
+                </div>
+            </div>
+
+            <!-- Información de Métodos de Pago -->
+            <div class="payment-info">
+                <h3>Métodos de Pago Disponibles</h3>
+                
+                <div class="payment-option">
+                    <h4>🏦 Transferencia Bancaria</h4>
+                    <p>
+                        Realiza una transferencia bancaria a nuestra cuenta:
+                    </p>
+                    <ul>
+                        <li><strong>Banco:</strong> Banco Nacional de México (Banamex)</li>
+                        <li><strong>Cuenta:</strong> 123456789</li>
+                        <li><strong>CLABE:</strong> 002180123456789012</li>
+                        <li><strong>Beneficiario:</strong> TechStore S.A. de C.V.</li>
+                    </ul>
+                </div>
+
+                <div class="payment-option">
+                    <h4>💳 Tarjeta de Crédito/Débito</h4>
+                    <p>
+                        Aceptamos todas las tarjetas principales:
+                    </p>
+                    <ul>
+                        <li>Visa</li>
+                        <li>Mastercard</li>
+                        <li>American Express</li>
+                        <li>Discover</li>
+                    </ul>
+                    <p class="security">🔒 Tus datos son seguros con encriptación SSL</p>
+                </div>
+
+                <div class="payment-option">
+                    <h4>🅿️ PayPal</h4>
+                    <p>
+                        Paga de forma segura a través de PayPal.
+                    </p>
+                    <p><a href="https://www.paypal.com" target="_blank">Ir a PayPal</a></p>
+                    <p class="email"><strong>Cuenta PayPal:</strong> ventas@techstore.com</p>
+                </div>
+            </div>
+
+            <!-- Video de YouTube -->
+            <div class="video-section">
+                <h3>Conoce Más Sobre Nuestros Productos</h3>
+                <div class="video-container">
+                    <iframe width="100%" height="500" src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            title="TechStore - Productos y Servicios" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 TechStore. Todos los derechos reservados.</p>
+            <p>Síguenos en redes sociales</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                <a href="https://www.twitter.com" target="_blank">Twitter</a>
+                <a href="https://www.youtube.com" target="_blank">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
